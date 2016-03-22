@@ -1,0 +1,29 @@
+{
+  "name": "nodejs-restful-api",
+  "version": "1.0.0",
+  "description": "nodejs sample restful api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mucahitinel/nodejs-restful-api.git"
+  },
+  "author": "Mucahit INEL",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mucahitinel/nodejs-restful-api/issues"
+  },
+  "homepage": "https://github.com/mucahitinel/nodejs-restful-api#readme",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4",
+    "express-jwt": "^3.3.0",
+    "express-unless": "^0.3.0",
+    "jsonwebtoken": "^5.7.0",
+    "method-override": "^2.3.5",
+    "mongoose": "^4.4.8",
+    "morgan": "^1.7.0"
+  }
+}
