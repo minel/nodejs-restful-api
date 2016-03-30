@@ -25,7 +25,8 @@ module.exports = function (app) {
 	// example http://localhost:4000
 	app.use(function (req, res, next) {
 		res.header('Access-Control-Allow-Origin', '*');
-		res.header('Access-Control-Allow-Headers', 'X-Requested-With,Content-Type,Authorization');
+		res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+		//res.header('Access-Control-Allow-Headers', 'X-Requested-With,Content-Type,Authorization');
 		next();
 	});
 
@@ -36,7 +37,7 @@ module.exports = function (app) {
 		expressJwt({
 			secret: process.env.JWT_SECRET || 'sssshhhh'
 		}).unless({
-			path: ['/api/login', 'api/register']
+			path: ['/api/login', '/api/register']
 		})
 	);
 
@@ -59,6 +60,6 @@ module.exports = function (app) {
 		res.status(404).json({
 			success : false,
 			data: 'Not found'
-		})
+		});
 	});
 }

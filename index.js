@@ -1,7 +1,7 @@
 var app = module.exports = require("express")();
 
 require('./core/mongoose');
-//require('./core/express')(app);
+require('./core/express')(app);
 
 var port = process.env.PORT || 3000;
 

@@ -2,7 +2,8 @@ var express = require('express'),
 	fs = require("fs");
 
 module.exports = function (app) {
-	var controllers_path = process.cwd() + '/controller';
+	var controllers = {},
+		controllers_path = process.cwd() + '/controller';
 
 	fs.readdirSync(controllers_path).forEach(function (file) {
 		if (file.indexOf('.js') != -1) {
@@ -28,4 +29,4 @@ module.exports = function (app) {
 		.post(controllers.auth.register);
 
 	return router;
-}
+};
