@@ -35,7 +35,7 @@ module.exports = function (app) {
 	// unless: don't apply authentication layer for path variables
 	app.use(
 		expressJwt({
-			secret: process.env.JWT_SECRET || 'sssshhhh'
+			secret: process.env.JWT_SECRET || 'sshhsshh'
 		}).unless({
 			path: ['/api/login', '/api/register']
 		})
